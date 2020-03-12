@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Bond" alias="Bond" created="2019-09-23T15:24:33" modified="2020-03-12T11:53:20" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="Agent" parentTableSchema="dbo" parentTableName="Agent" x="389" y="181">
+      <foreignKeyColumn columnName="AgentID" parentColumnName="AgentID" />
+    </foreignKey>
+    <foreignKey id="StatusCode" parentTableSchema="dbo" parentTableName="StatusCode" x="433" y="313">
+      <foreignKeyColumn columnName="StatusCode" parentColumnName="Code" />
+    </foreignKey>
+    <foreignKey id="Landlord" parentTableSchema="dbo" parentTableName="Lessor" x="416" y="429">
+      <foreignKeyColumn columnName="LandlordID" parentColumnName="LandlordID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="ResidentialTenancyID" fieldName="ResidentialTenancyID" label="Residential Tenancy ID" sortType="Ascending" sortOrder="1" />
+    <column name="AddressLine1Desc" fieldName="AddressLine1Desc" label="Address Line1" />
+    <column name="AddressLine2Desc" fieldName="AddressLine2Desc" label="Address Line2" />
+    <column name="AddressLine3Desc" fieldName="AddressLine3Desc" label="Address Line3" />
+    <column name="SuburbName" fieldName="SuburbName" label="Suburb Name" />
+    <column name="DistrictName" fieldName="DistrictName" label="District Name" />
+    <column name="StateCode" fieldName="StateCode" label="State Code" />
+    <column name="SuburbPostCode" fieldName="SuburbPostCode" label="Suburb Post Code" />
+    <column name="BlockKey" fieldName="BlockKey" label="Block Key" />
+    <column name="LandlordID" fieldName="LandlordID" label="Landlord ID" aliasColumnName="FirstName" aliasForeignKey="Landlord" />
+    <column name="FirstName" fieldName="LandlordFirstName" label="Landlord First Name" foreignKey="Landlord" />
+    <column name="SurName" fieldName="LandlordSurName" label="Landlord Sur Name" foreignKey="Landlord" />
+    <column name="LandlordAmount" fieldName="LandlordAmount" label="Landlord Amount" format="c" />
+    <column name="LandlordEffectiveDate" fieldName="LandlordEffectiveDate" label="Landlord Effective Date" format="g" />
+    <column name="AgentID" fieldName="AgentID" label="Agent ID" aliasColumnName="FullDisplayName" aliasForeignKey="Agent" />
+    <column name="FullDisplayName" fieldName="AgentFullDisplayName" label="Agent Full Display Name" foreignKey="Agent" />
+    <column name="AgentEffectiveDate" fieldName="AgentEffectiveDate" label="Agent Effective Date" format="g" />
+    <column name="WeeklyRentalAmount" fieldName="WeeklyRentalAmount" label="Weekly Rental Amount" format="c" />
+    <column name="TotalBondAmount" fieldName="TotalBondAmount" label="Total Bond Amount" format="c" />
+    <column name="StatusCode" fieldName="StatusCode" label="Status Code" aliasColumnName="Code" aliasForeignKey="StatusCode" />
+    <column name="Code" fieldName="Code" label="Status Code" foreignKey="StatusCode" />
+    <column name="isActive" fieldName="StatuscodeIsactive" label="Statuscode Isactive" foreignKey="StatusCode" />
+    <column name="TenDayLetterSentDate" fieldName="TenDayLetterSentDate" label="Ten Day Letter Sent Date" format="g" />
+    <column name="TenDayLetterExpiryDate" fieldName="TenDayLetterExpiryDate" label="Ten Day Letter Expiry Date" format="g" />
+    <column name="TenDayLetterStatusCode" fieldName="TenDayLetterStatusCode" label="Ten Day Letter Status Code" />
+    <column name="DwellingTypeCode" fieldName="DwellingTypeCode" label="Dwelling Type Code" />
+    <column name="BedroomCount" fieldName="BedroomCount" label="Bedroom Count" />
+    <column name="LodgementTstamp" fieldName="LodgementTstamp" label="Lodgement Tstamp" format="g" />
+    <column name="RefundDate" fieldName="RefundDate" label="Refund Date" format="g" />
+    <column name="RefundAmount" fieldName="RefundAmount" label="Refund Amount" format="c" />
+    <column name="TenancyCommencementDate" fieldName="TenancyCommencementDate" label="Tenancy Commencement Date" format="g" />
+    <column name="HousingInd" fieldName="HousingInd" label="Housing Ind" />
+    <column name="RBSNo" fieldName="Rbsno" label="RBS No" />
+    <column name="MigrationNote" fieldName="MigrationNote" label="Migration Note" />
+    <column name="LastUpdatedTstamp" fieldName="LastUpdatedTstamp" label="Last Updated Tstamp" format="g" />
+    <column name="LastUpdatedUserCode" fieldName="LastUpdatedUserCode" label="Last Updated User Code" />
+    <column name="ExpectedBondAmount" fieldName="ExpectedBondAmount" label="Expected Bond Amount" format="c" />
+  </columns>
+</dataModel>

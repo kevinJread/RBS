@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Document" alias="Document" created="2020-03-12T11:46:36" modified="2020-03-12T11:46:58" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="BondNo" fieldName="BondNo" label="Bond No" sortType="Ascending" sortOrder="1" />
+    <column name="InstrumentNo" fieldName="InstrumentNo" label="Instrument No" sortType="Ascending" sortOrder="2" />
+    <column name="ProcessingOfficer" fieldName="ProcessingOfficer" label="Processing Officer" />
+    <column name="AuthorisingOfficer" fieldName="AuthorisingOfficer" label="Authorising Officer" />
+    <column name="DateProcessed" fieldName="DateProcessed" label="Date Processed" format="g" />
+    <column name="DocumentType" fieldName="DocumentType" label="Document Type" />
+    <column name="DateAuthorised" fieldName="DateAuthorised" label="Date Authorised" format="g" />
+    <column name="LodgingPartyName" fieldName="LodgingPartyName" label="Lodging Party Name" />
+  </columns>
+</dataModel>

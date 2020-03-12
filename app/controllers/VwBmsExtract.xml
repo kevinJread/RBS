@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="VwBmsExtract" conflictDetection="overwriteChanges" label="Vw Bms Extract" plugIn="MyCompany.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"vw_BMS_Extract"."ResidentialTenancyID" "ResidentialTenancyID"
+	,"Notes_B"."ResidentialTenancyID" "NotesBResidentialtenancyid"
+	,"Notes_B"."NoteID" "NotesBNoteid"
+	,"Notes_B"."NoteType" "NotesBNotetype"
+	,"Notes_B"."NoteText" "NotesBNotetext"
+	,"Notes_B"."LastUpdatedTstamp" "NotesBLastupdatedtstamp"
+	,"Notes_B"."LastUpdatedUserCode" "NotesBLastupdatedusercode"
+	,"vw_BMS_Extract"."StatusCode" "StatusCode"
+	,"vw_BMS_Extract"."LodgementTstamp" "LodgementTstamp"
+	,"vw_BMS_Extract"."TenancyCommencementDate" "TenancyCommencementDate"
+	,"vw_BMS_Extract"."RefundDate" "RefundDate"
+	,"vw_BMS_Extract"."FirstName" "FirstName"
+	,"vw_BMS_Extract"."SurName" "SurName"
+	,"vw_BMS_Extract"."AddressLine1Desc" "AddressLine1Desc"
+	,"vw_BMS_Extract"."SuburbName" "SuburbName"
+	,"vw_BMS_Extract"."SuburbPostCode" "SuburbPostCode"
+	,"vw_BMS_Extract"."LandlordFirstName" "LandlordFirstName"
+	,"vw_BMS_Extract"."LandlordSurname" "LandlordSurname"
+	,"vw_BMS_Extract"."WeeklyRentalAmount" "WeeklyRentalAmount"
+	,"vw_BMS_Extract"."TotalBondAmount" "TotalBondAmount"
+	,"vw_BMS_Extract"."DwellingTypeCode" "DwellingTypeCode"
+	,"vw_BMS_Extract"."BedroomCount" "BedroomCount"
+	,"vw_BMS_Extract"."AgentName" "AgentName"
+	,"vw_BMS_Extract"."AgentAddress" "AgentAddress"
+	,"vw_BMS_Extract"."AgentSuburb" "AgentSuburb"
+	,"vw_BMS_Extract"."AgentPostCode" "AgentPostCode"
+from "dbo"."vw_BMS_Extract" "vw_BMS_Extract"
+	left join "dbo"."Notes_B" "Notes_B" on "vw_BMS_Extract"."ResidentialTenancyID" = "Notes_B"."ResidentialTenancyID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ResidentialTenancyID" type="Int32" allowNulls="false" label="Residential Tenancy ID" showInSummary="true">
+      <items style="Lookup" dataController="NotesB" newDataView="createForm1" dataValueField="ResidentialTenancyID" dataTextField="ResidentialTenancyID" copy="NotesBNoteid=NoteID, NotesBNotetype=NoteType, NotesBNotetext=NoteText, NotesBLastupdatedtstamp=LastUpdatedTstamp, NotesBLastupdatedusercode=LastUpdatedUserCode" />
+    </field>
+    <field name="NotesBResidentialtenancyid" type="Int32" readOnly="true" label="Notes B Residentialtenancyid" />
+    <field name="NotesBNoteid" type="Int32" readOnly="true" label="Notes B Noteid" />
+    <field name="NotesBNotetype" type="String" readOnly="true" label="Notes B Notetype" length="20" />
+    <field name="NotesBNotetext" type="String" readOnly="true" allowQBE="false" allowSorting="false" label="Notes B Notetext" />
+    <field name="NotesBLastupdatedtstamp" type="DateTime" readOnly="true" dataFormatString="g" label="Notes B Lastupdatedtstamp" />
+    <field name="NotesBLastupdatedusercode" type="String" readOnly="true" label="Notes B Lastupdatedusercode" length="10" />
+    <field name="StatusCode" type="String" label="Status Code" length="20" showInSummary="true" />
+    <field name="LodgementTstamp" type="DateTime" dataFormatString="g" label="Lodgement Tstamp" showInSummary="true" />
+    <field name="TenancyCommencementDate" type="DateTime" dataFormatString="g" label="Tenancy Commencement Date" showInSummary="true" />
+    <field name="RefundDate" type="DateTime" dataFormatString="g" label="Refund Date" showInSummary="true" />
+    <field name="FirstName" type="String" label="First Name" length="50" />
+    <field name="SurName" type="String" label="Sur Name" length="50" />
+    <field name="AddressLine1Desc" type="String" label="Address Line1 Desc" length="50" />
+    <field name="SuburbName" type="String" label="Suburb Name" length="30" />
+    <field name="SuburbPostCode" type="String" label="Suburb Post Code" length="10" />
+    <field name="LandlordFirstName" type="String" label="Landlord First Name" length="50" />
+    <field name="LandlordSurname" type="String" label="Landlord Surname" length="50" />
+    <field name="WeeklyRentalAmount" type="Decimal" dataFormatString="c" label="Weekly Rental Amount" />
+    <field name="TotalBondAmount" type="Decimal" dataFormatString="c" label="Total Bond Amount" />
+    <field name="DwellingTypeCode" type="String" label="Dwelling Type Code" length="20" />
+    <field name="BedroomCount" type="Int16" label="Bedroom Count" />
+    <field name="AgentName" type="String" label="Agent Name" length="50" />
+    <field name="AgentAddress" type="String" label="Agent Address" length="50" />
+    <field name="AgentSuburb" type="String" label="Agent Suburb" length="30" />
+    <field name="AgentPostCode" type="String" label="Agent Post Code" length="10" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Vw Bms Extract">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ResidentialTenancyID" aliasFieldName="NotesBResidentialtenancyid" />
+        <dataField fieldName="StatusCode" columns="20" />
+        <dataField fieldName="LodgementTstamp" columns="20" />
+        <dataField fieldName="TenancyCommencementDate" columns="20" />
+        <dataField fieldName="RefundDate" columns="20" />
+        <dataField fieldName="FirstName" columns="50" />
+        <dataField fieldName="SurName" columns="50" />
+        <dataField fieldName="AddressLine1Desc" columns="50" />
+        <dataField fieldName="SuburbName" columns="30" />
+        <dataField fieldName="SuburbPostCode" columns="10" />
+        <dataField fieldName="LandlordFirstName" columns="50" />
+        <dataField fieldName="LandlordSurname" columns="50" />
+        <dataField fieldName="WeeklyRentalAmount" columns="15" />
+        <dataField fieldName="TotalBondAmount" columns="15" />
+        <dataField fieldName="DwellingTypeCode" columns="20" />
+        <dataField fieldName="BedroomCount" columns="15" />
+        <dataField fieldName="AgentName" columns="50" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Vw Bms Extract">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Rental Bond" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ResidentialTenancyID" aliasFieldName="NotesBResidentialtenancyid" />
+            <dataField fieldName="StatusCode" columns="20" />
+            <dataField fieldName="LodgementTstamp" columns="20" />
+            <dataField fieldName="TenancyCommencementDate" columns="20" />
+            <dataField fieldName="RefundDate" columns="20" />
+            <dataField fieldName="FirstName" columns="50" />
+            <dataField fieldName="SurName" columns="50" />
+            <dataField fieldName="AddressLine1Desc" columns="50" />
+            <dataField fieldName="SuburbName" columns="30" />
+            <dataField fieldName="SuburbPostCode" columns="10" />
+            <dataField fieldName="LandlordFirstName" columns="50" />
+            <dataField fieldName="LandlordSurname" columns="50" />
+            <dataField fieldName="WeeklyRentalAmount" columns="15" />
+            <dataField fieldName="TotalBondAmount" columns="15" />
+            <dataField fieldName="DwellingTypeCode" columns="20" />
+            <dataField fieldName="BedroomCount" columns="15" />
+            <dataField fieldName="AgentName" columns="50" />
+          </dataFields>
+        </category>
+        <category headerText="Agent Details" tab="Agent" id="c3">
+          <dataFields>
+            <dataField fieldName="AgentAddress" columns="50" />
+            <dataField fieldName="AgentSuburb" columns="30" />
+            <dataField fieldName="AgentPostCode" columns="10" />
+          </dataFields>
+        </category>
+        <category headerText="Notes" tab="Notes" id="c2">
+          <dataFields>
+            <dataField fieldName="NotesBNoteid" columns="15" />
+            <dataField fieldName="NotesBNotetype" columns="20" />
+            <dataField fieldName="NotesBNotetext" rows="5" />
+            <dataField fieldName="NotesBLastupdatedtstamp" columns="20" />
+            <dataField fieldName="NotesBLastupdatedusercode" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

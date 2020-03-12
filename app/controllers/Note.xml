@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Note" conflictDetection="overwriteChanges" label="Note" plugIn="MyCompany.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Note"."ResidentialTenancyID" "ResidentialTenancyID"
+	,"ResidentialTenancy"."AddressLine3Desc" "ResidentialTenancyAddressLine3Desc"
+	,"ResidentialTenancyAgent"."FullDisplayName" "ResidentialTenancyAgentFullDisplayName"
+	,"ResidentialTenancyLandlord"."FirstName" "ResidentialTenancyLandlordFirstName"
+	,"Note"."NoteID" "NoteID"
+	,"Note"."NoteType" "NoteType"
+	,"Note"."NoteText" "NoteText"
+	,"Note"."LastUpdatedTstamp" "LastUpdatedTstamp"
+	,"Note"."LastUpdatedUserCode" "LastUpdatedUserCode"
+from "dbo"."Note" "Note"
+	left join "dbo"."Bond" "ResidentialTenancy" on "Note"."ResidentialTenancyID" = "ResidentialTenancy"."ResidentialTenancyID"
+	left join "dbo"."Agent" "ResidentialTenancyAgent" on "ResidentialTenancy"."AgentID" = "ResidentialTenancyAgent"."AgentID"
+	left join "dbo"."Lessor" "ResidentialTenancyLandlord" on "ResidentialTenancy"."LandlordID" = "ResidentialTenancyLandlord"."LandlordID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ResidentialTenancyID" type="Int32" allowNulls="false" label="Residential Tenancy ID" showInSummary="true">
+      <items style="Lookup" dataController="Bond" newDataView="createForm1" dataValueField="ResidentialTenancyID" dataTextField="AddressLine3Desc" copy="ResidentialTenancyAgentFullDisplayName=AgentFullDisplayName, " />
+    </field>
+    <field name="ResidentialTenancyAddressLine3Desc" type="String" readOnly="true" label="Residential Tenancy Address Line3 Desc" length="50" />
+    <field name="ResidentialTenancyAgentFullDisplayName" type="String" readOnly="true" label="Residential Tenancy Agent Full Display Name" length="100" />
+    <field name="ResidentialTenancyLandlordFirstName" type="String" readOnly="true" label="Residential Tenancy Landlord First Name" length="50" />
+    <field name="NoteID" type="Int32" allowNulls="false" label="Note ID" showInSummary="true" />
+    <field name="NoteType" type="String" label="Note Type" length="20" showInSummary="true" />
+    <field name="NoteText" type="String" allowQBE="false" allowSorting="false" label="Note Text" showInSummary="true" />
+    <field name="LastUpdatedTstamp" type="DateTime" dataFormatString="g" label="Last Updated Tstamp" showInSummary="true" />
+    <field name="LastUpdatedUserCode" type="String" label="Last Updated User Code" length="10" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Note">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ResidentialTenancyID" aliasFieldName="ResidentialTenancyAddressLine3Desc" />
+        <dataField fieldName="ResidentialTenancyAgentFullDisplayName" />
+        <dataField fieldName="ResidentialTenancyLandlordFirstName" columns="50" />
+        <dataField fieldName="NoteID" columns="15" />
+        <dataField fieldName="NoteType" columns="20" />
+        <dataField fieldName="NoteText" rows="5" />
+        <dataField fieldName="LastUpdatedTstamp" columns="20" />
+        <dataField fieldName="LastUpdatedUserCode" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Note">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Note" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ResidentialTenancyID" aliasFieldName="ResidentialTenancyAddressLine3Desc" />
+            <dataField fieldName="ResidentialTenancyAgentFullDisplayName" />
+            <dataField fieldName="ResidentialTenancyLandlordFirstName" columns="50" />
+            <dataField fieldName="NoteID" columns="15" />
+            <dataField fieldName="NoteType" columns="20" />
+            <dataField fieldName="NoteText" rows="5" />
+            <dataField fieldName="LastUpdatedTstamp" columns="20" />
+            <dataField fieldName="LastUpdatedUserCode" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Note">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ResidentialTenancyID" aliasFieldName="ResidentialTenancyAddressLine3Desc" />
+            <dataField fieldName="ResidentialTenancyAgentFullDisplayName" />
+            <dataField fieldName="ResidentialTenancyLandlordFirstName" columns="50" />
+            <dataField fieldName="NoteID" columns="15" />
+            <dataField fieldName="NoteType" columns="20" />
+            <dataField fieldName="NoteText" rows="5" />
+            <dataField fieldName="LastUpdatedTstamp" columns="20" />
+            <dataField fieldName="LastUpdatedUserCode" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag9" scope="ActionColumn">
+      <action id="a1" commandName="Edit" commandArgument="editForm1" />
+      <action id="a2" commandName="Delete" />
+    </actionGroup>
+  </actions>
+</dataController>

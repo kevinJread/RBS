@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="StatusCode" alias="StatusCode" created="2019-09-23T15:49:41" modified="2020-03-12T11:52:15" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="Code" fieldName="Code" label="Code" />
+    <column name="Label" fieldName="Label" label="Label" />
+    <column name="isActive" fieldName="isActive" label="is Active" />
+  </columns>
+</dataModel>

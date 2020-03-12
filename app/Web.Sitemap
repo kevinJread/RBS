@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
+    <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/pages/home" cssClass="Wide" />
+    <siteMapNode title="Bond" description="View Bonds" url="~/pages/bond" />
+    <siteMapNode title="Agent" description="View Agents" url="~/pages/agents" />
+    <siteMapNode title="Lessor" description="View Lessors" url="~/pages/lessors" />
+    <siteMapNode title="Tenant" description="View Tenant" url="~/pages/tenant" />
+    <siteMapNode title="Misc" description="" url="~/pages/misc" roles="*">
+      <siteMapNode title="Status Code" description="View Status Code" url="~/pages/status-code" />
+      <siteMapNode title="^MembershipPath^Membership^MembershipPath^" description="^MembershipDesc^User and role manager^MembershipDesc^" url="~/pages/membership" roles="Administrators" />
+      <siteMapNode title="Document" description="View Document" url="~/pages/document" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

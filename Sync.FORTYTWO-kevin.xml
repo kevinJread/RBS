@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8"?><logs><log type="Controllers"><c y="NodeSet" t="2019-09-18T14:20:54"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="NotesBNoteid" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:20:54"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="NotesBNotetype" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:20:54"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="NotesBNotetext" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:20:54"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="NotesBLastupdatedtstamp" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:20:54"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="NotesBLastupdatedusercode" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:21:10"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="AgentAddress" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:21:10"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="AgentSuburb" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:21:10"><controller name="VwBmsExtract" />
+<view id="grid1" />
+<dataField fieldName="AgentPostCode" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:21:36"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c1" />
+<update>
+  <HeaderText>Rental Bond</HeaderText>
+</update></c><c y="NodeSet" t="2019-09-18T14:21:55"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Notes</HeaderText>
+  <Tab>Notes</Tab>
+</insert></c><c y="NodeSet" t="2019-09-18T14:22:02"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="NotesBNoteid" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:02"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="NotesBNotetype" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:02"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="NotesBNotetext" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:02"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="NotesBLastupdatedtstamp" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:02"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="NotesBLastupdatedusercode" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:47"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Agent Details</HeaderText>
+  <Tab>Agent</Tab>
+</insert></c><c y="NodeSet" t="2019-09-18T14:22:56"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AgentAddress" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:56"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AgentSuburb" />
+</move></c><c y="NodeSet" t="2019-09-18T14:22:56"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AgentPostCode" />
+</move></c><c y="NodeSet" t="2019-09-18T14:23:20"><controller name="VwBmsExtract" />
+<view id="editForm1" />
+<category id="c2" />
+<before>
+  <controller name="VwBmsExtract" />
+  <view id="editForm1" />
+  <category id="c3" />
+</before></c><c y="NodeSet" t="2019-09-18T14:33:28"><controller name="VwBmsExtract" />
+<view id="createForm1" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:28:33"><controller name="Bond" />
+<move>
+  <controller name="Tenant" />
+</move></c><c y="NodeSet" t="2019-09-23T15:28:45"><controller name="Bond" />
+<view id="editForm1" />
+<move>
+  <controller name="Bond" />
+  <field name="Tenant" />
+</move></c><c y="NodeSet" t="2019-09-23T15:28:51"><controller name="Bond" />
+<view id="createForm1" />
+<move>
+  <controller name="Bond" />
+  <field name="Tenant" />
+</move></c><c y="NodeSet" t="2019-09-23T15:29:36"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="AddressLine2Desc" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:29:36"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="AddressLine3Desc" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:29:53"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="DistrictName" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:00"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="StateCode" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:05"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="SuburbPostCode" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:20"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="LandlordAmount" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:20"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="LandlordEffectiveDate" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:31"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="AgentEffectiveDate" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:30:31"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="WeeklyRentalAmount" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="DwellingTypeCode" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="BedroomCount" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="MigrationNote" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="LastUpdatedTstamp" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="LastUpdatedUserCode" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:15"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="ExpectedBondAmount" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:31:49"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="AddressLine1Desc" />
+<before>
+  <controller name="Bond" />
+  <view id="grid1" />
+  <dataField fieldName="Rbsno" />
+</before></c><c y="NodeSet" t="2019-09-23T15:31:55"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="Rbsno" />
+<before>
+  <controller name="Bond" />
+  <view id="grid1" />
+  <dataField fieldName="StatusCode" />
+</before></c><c y="NodeSet" t="2019-09-23T15:33:05"><controller name="Bond" />
+<field name="AddressLine1Desc" />
+<before>
+  <controller name="Bond" />
+  <field name="StatusCode" />
+</before></c><c y="NodeSet" t="2019-09-23T15:34:03"><controller name="Bond" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Tenants</HeaderText>
+  <Flow>NewColumn</Flow>
+  <Tab>Tenants</Tab>
+</insert></c><c y="NodeSet" t="2019-09-23T15:34:06"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="Tenant" />
+</move></c><c y="NodeSet" t="2019-09-23T15:36:22"><controller name="Bond" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Notes</HeaderText>
+  <Flow>NewColumn</Flow>
+  <Tab>Notes</Tab>
+</insert></c><c y="NodeSet" t="2019-09-23T15:36:29"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c2" />
+<update>
+  <Flow>NewRow</Flow>
+</update></c><c y="NodeSet" t="2019-09-23T15:36:41"><controller name="Bond" />
+<move>
+  <controller name="Note" />
+</move></c><c y="NodeSet" t="2019-09-23T15:36:46"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <field name="Note" />
+</move></c><c y="NodeSet" t="2019-09-23T15:37:41"><controller name="Bond" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Audit</HeaderText>
+  <Flow>NewColumn</Flow>
+  <Tab>Audit</Tab>
+</insert></c><c y="NodeSet" t="2019-09-23T15:38:08"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c4" />
+<move>
+  <controller name="Bond" />
+  <field name="LastUpdatedTstamp" />
+</move></c><c y="NodeSet" t="2019-09-23T15:38:08"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c4" />
+<move>
+  <controller name="Bond" />
+  <field name="LastUpdatedUserCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:38:23"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <field name="MigrationNote" />
+</move></c><c y="NodeSet" t="2019-09-23T15:38:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<dataField fieldName="Note" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c3" />
+  <dataField fieldName="MigrationNote" />
+</before></c><c y="NodeSet" t="2019-09-23T15:38:39"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="AddressLine1Desc" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="StatusCode" />
+</before></c><c y="NodeSet" t="2019-09-23T15:38:43"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="AddressLine1Desc" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="Rbsno" />
+</before></c><c y="NodeSet" t="2019-09-23T15:39:38"><controller name="Bond" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Address</HeaderText>
+  <Flow>NewColumn</Flow>
+  <Tab>Address</Tab>
+</insert></c><c y="NodeSet" t="2019-09-23T15:39:43"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c5" />
+</before></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AddressLine1Desc" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AddressLine2Desc" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AddressLine3Desc" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="SuburbName" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="DistrictName" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="StateCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:39:53"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="SuburbPostCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:40:31"><controller name="Bond" />
+<view id="editForm1" />
+<insert type="category">
+  <HeaderText>Refunds</HeaderText>
+  <Flow>NewColumn</Flow>
+  <Tab>Refunds</Tab>
+</insert></c><c y="NodeSet" t="2019-09-23T15:40:39"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c6" />
+</move></c><c y="NodeSet" t="2019-09-23T15:40:43"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c2" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c6" />
+</before></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="LandlordAmount" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="LandlordEffectiveDate" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="AgentEffectiveDate" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="RefundAmount" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="RefundDate" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="TenDayLetterSentDate" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="TenDayLetterExpiryDate" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="TenDayLetterStatusCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:41:29"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<dataField fieldName="LandlordAmount" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c6" />
+  <dataField fieldName="RefundAmount" />
+</before></c><c y="NodeSet" t="2019-09-23T15:41:36"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c6" />
+<dataField fieldName="LandlordAmount" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c6" />
+  <dataField fieldName="RefundDate" />
+</before></c><c y="NodeSet" t="2019-09-23T15:44:22"><controller name="Bond" />
+<view id="editForm1" />
+<update>
+  <Tags>modal-fullscreen</Tags>
+</update></c><c y="NodeSet" t="2019-09-23T15:55:41"><controller name="Bond" />
+<update>
+  <GenerateDataAccessObjects>false</GenerateDataAccessObjects>
+  <StatusBar>Code: 'FAKE'
+New &gt; [FAKE] &gt; Remove me &gt;</StatusBar>
+</update></c><c y="NodeSet" t="2019-09-23T15:57:16"><controller name="Bond" />
+<update>
+  <StatusBar>Code: FAKE
+New &gt; [FAKE] &gt; Remove me &gt;</StatusBar>
+</update></c><c y="NodeSet" t="2019-09-23T15:58:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="Rbsno" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="LodgementTstamp" />
+</before></c><c y="NodeSet" t="2019-09-23T15:58:31"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="Rbsno" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="TenancyCommencementDate" />
+</before></c><c y="NodeSet" t="2019-09-23T15:58:36"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="Rbsno" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="HousingInd" />
+</before></c><c y="NodeSet" t="2019-09-23T15:58:47"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="DwellingTypeCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:58:47"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="BedroomCount" />
+</move></c><c y="NodeSet" t="2019-09-23T15:58:52"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<dataField fieldName="BedroomCount" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c3" />
+  <dataField fieldName="Note" />
+</move></c><c y="NodeSet" t="2019-09-23T15:58:57"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="BlockKey" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c3" />
+  <dataField fieldName="MigrationNote" />
+</before></c><c y="NodeSet" t="2019-09-23T15:59:02"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="BlockKey" />
+</move></c><c y="NodeSet" t="2019-09-23T15:59:15"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="WeeklyRentalAmount" />
+</move></c><c y="NodeSet" t="2019-09-23T15:59:15"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<move>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="ExpectedBondAmount" />
+</move></c><c y="NodeSet" t="2019-09-23T15:59:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c5" />
+<dataField fieldName="DistrictName" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:59:31"><controller name="Bond" />
+<field name="DistrictName" />
+<delete /></c><c y="NodeSet" t="2019-09-23T15:59:46"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<dataField fieldName="ExpectedBondAmount" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c3" />
+  <dataField fieldName="Note" />
+</before></c><c y="NodeSet" t="2019-09-23T15:59:48"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c3" />
+<dataField fieldName="Note" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c3" />
+  <dataField fieldName="ExpectedBondAmount" />
+</before></c><c y="NodeSet" t="2019-09-23T16:00:03"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="TotalBondAmount" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="Rbsno" />
+</before></c><c y="NodeSet" t="2019-09-23T16:00:03"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="TotalBondAmount" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="MigrationNote" />
+</before></c><c y="NodeSet" t="2019-09-23T16:00:08"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="LodgementTstamp" />
+<before>
+  <controller name="Bond" />
+  <view id="editForm1" />
+  <category id="c1" />
+  <dataField fieldName="TotalBondAmount" />
+</before></c><c y="NodeSet" t="2019-09-23T16:08:51"><controller name="Bond" />
+<actionGroup id="ag2" />
+<insert type="action">
+  <CommandName>Custom</CommandName>
+  <CommandArgument>TransferToPortal</CommandArgument>
+  <HeaderText>Transfer to RB Portal</HeaderText>
+  <CausesValidation>true</CausesValidation>
+  <Data>UPDATE Bond
+SET StatusCode = 'TRANSFERRED'
+WHERE ResidentialTenancyId = @ResidentialTenancyID</Data>
+  <CssClass>material-icon-cancel</CssClass>
+</insert></c><c y="NodeSet" t="2019-09-23T16:12:19"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond B
+SET B.StatusCode = 'TRANSFERED'
+WHERE B.ResidentialTenancyId = @ResidentialTenancyID</Data>
+</update></c><c y="NodeSet" t="2019-09-23T16:12:52"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond B
+SET B.StatusCode = 'TRANSFERED'
+WHERE B.ResidentialTenancyId = @ResidentialTenancyID</Data>
+</update></c><c y="NodeSet" t="2019-09-23T16:13:23"><controller name="Bond" />
+<actionGroup id="ag1" />
+<move>
+  <controller name="Bond" />
+  <actionGroup id="ag2" />
+  <action id="a100" />
+</move></c><c y="NodeSet" t="2019-09-23T16:14:43"><controller name="Bond" />
+<actionGroup id="ag1" />
+<action id="a100" />
+<update>
+  <CommandName>SQL</CommandName>
+  <Data>UPDATE Bond B
+SET B.StatusCode = 'TRANSFERED'
+WHERE B.ResidentialTenancyId = @ResidentialTenancyID</Data>
+  <WhenLastCommandName>Execute</WhenLastCommandName>
+</update></c><c y="NodeSet" t="2019-09-23T16:14:56"><controller name="Bond" />
+<actionGroup id="ag2" />
+<move>
+  <controller name="Bond" />
+  <actionGroup id="ag1" />
+  <action id="a100" />
+</move></c><c y="NodeSet" t="2019-09-23T16:15:36"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <CommandName>Custom</CommandName>
+  <Data>UPDATE Bond B
+SET B.StatusCode = 'TRANSFERED'
+WHERE B.ResidentialTenancyId = @ResidentialTenancyID</Data>
+</update></c><c y="NodeSet" t="2019-09-23T16:16:11"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond B
+SET B.StatusCode = 'TRANSFERED'
+WHERE B.ResidentialTenancyId = @ResidentialTenancyID</Data>
+  <WhenLastCommandName />
+</update></c><c y="NodeSet" t="2019-09-23T16:19:58"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond
+SET StatusCode = 'TRANSFERED'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Data>
+</update></c><c y="NodeSet" t="2019-09-23T16:22:19"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond
+SET StatusCode = 'TRANSFERED'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Data>
+  <Roles>*</Roles>
+</update></c><c y="NodeSet" t="2019-09-23T16:22:46"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data>UPDATE Bond
+SET StatusCode = 'TRANSFERED'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Data>
+  <Roles />
+</update></c><c y="NodeSet" t="2019-09-23T16:25:02"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <Data />
+</update></c><c y="NodeSet" t="2019-09-23T16:25:27"><controller name="Bond" />
+<insert type="rule">
+  <Type>Sql</Type>
+  <CommandName>TransferToPortal</CommandName>
+  <Phase>Execute</Phase>
+  <Script>UPDATE Bond
+SET StatusCode = 'TRANSFERED'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Script>
+</insert></c><c y="NodeSet" t="2019-09-23T16:25:38"><controller name="Bond" />
+<actionGroup id="ag1" />
+<copy>
+  <controller name="Bond" />
+  <actionGroup id="ag2" />
+  <action id="a100" />
+</copy></c><c y="NodeSet" t="2019-09-23T16:27:13"><controller name="Bond" />
+<rule id="r100" />
+<update>
+  <CommandName>Custom</CommandName>
+  <CommandArgument>TransferToPortal</CommandArgument>
+  <Script>UPDATE Bond
+SET StatusCode = 'TRANSFERED'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Script>
+</update></c><c y="NodeSet" t="2019-09-23T16:31:50"><controller name="Bond" />
+<actionGroup id="ag2" />
+<insert type="action">
+  <CommandName>Navigate</CommandName>
+  <CommandArgument>_blank:https://rentalbonds.revenue.act.gov.au/Login.aspx?id={ResidentialTenancyID}</CommandArgument>
+  <HeaderText>Show in Portal</HeaderText>
+  <CausesValidation>true</CausesValidation>
+</insert></c><c y="NodeSet" t="2019-09-23T16:37:21"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <WhenClientScript>$row.StatusCode != 'MIGRATED' or $row.StatusCode != 'TRANSFERED' </WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:38:31"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a100" />
+<update>
+  <WhenClientScript>$row.StatusCode != 'MIGRATED'</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:42:32"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a101" />
+<update>
+  <CommandArgument>_blank:https://rentalbonds.revenue.act.gov.au/Login.aspx?id={Rbsno}</CommandArgument>
+  <WhenClientScript>'' + $row.Rbsno != ''</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:45:31"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a101" />
+<update>
+  <WhenClientScript>$row.Rbsno.strLength != 0</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:46:04"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a101" />
+<update>
+  <WhenClientScript>$row.Rbsno.length != 0</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:48:27"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a101" />
+<update>
+  <WhenClientScript>!!$row.Rbsno.length</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T16:48:59"><controller name="Bond" />
+<actionGroup id="ag2" />
+<action id="a101" />
+<update>
+  <WhenClientScript>!!$row.Rbsno</WhenClientScript>
+</update></c><c y="NodeSet" t="2019-09-23T17:01:14"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="LodgementTstamp" />
+<update>
+  <Tag>calendar-start</Tag>
+  <Hidden>false</Hidden>
+  <DataViewShowInSummary>false</DataViewShowInSummary>
+</update></c><c y="NodeSet" t="2019-09-24T15:40:03"><controller name="Bond" />
+<rule id="r100" />
+<update>
+  <Script>UPDATE Bond
+SET StatusCode = 'TOPORTAL'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID</Script>
+</update></c><c y="NodeSet" t="2019-09-24T23:34:29"><controller name="Lessor" />
+<field name="SurName" />
+<update>
+  <Label>Last Name</Label>
+</update></c><c y="NodeSet" t="2019-09-25T14:02:36"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="TenantSurName" />
+<delete /></c><c y="NodeSet" t="2019-09-25T14:02:37"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="TenantEffectiveFromDate" />
+<delete /></c><c y="NodeSet" t="2019-09-25T14:02:37"><controller name="Bond" />
+<view id="grid1" />
+<dataField fieldName="TenantCashAmount" />
+<delete /></c><c y="NodeSet" t="2019-09-25T14:03:28"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="TenantSurName" />
+<delete /></c><c y="NodeSet" t="2019-09-25T14:03:28"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="TenantEffectiveFromDate" />
+<delete /></c><c y="NodeSet" t="2019-09-25T14:03:28"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c1" />
+<dataField fieldName="TenantCashAmount" />
+<delete /></c><c y="NodeSet" t="2020-03-12T09:45:01"><controller name="Lessor" />
+<view id="editForm1" />
+<update>
+  <Tags>modal-fullscreen</Tags>
+</update></c><c y="NodeSet" t="2020-03-12T09:45:17"><controller name="Tenant" />
+<view id="editForm1" />
+<update>
+  <Tags>modal-fullscreen</Tags>
+</update></c><c y="NodeSet" t="2020-03-12T09:46:57"><controller name="Bond" />
+<view id="grid1" />
+<rename>grdShowAll</rename></c><c y="NodeSet" t="2020-03-12T09:47:10"><controller name="Bond" />
+<view id="grdShowAll" />
+<update>
+  <Label>Shoe All Bonds</Label>
+</update></c><c y="NodeSet" t="2020-03-12T09:47:17"><controller name="Bond" />
+<copy>
+  <controller name="Bond" />
+  <view id="grdShowAll" />
+</copy></c><c y="NodeSet" t="2020-03-12T09:47:37"><controller name="Bond" />
+<view id="v100" />
+<rename>grdShowMigrated</rename></c><c y="NodeSet" t="2020-03-12T09:47:41"><controller name="Bond" />
+<view id="grdShowAll" />
+<before>
+  <controller name="Bond" />
+  <view id="grdShowMigrated" />
+</before></c><c y="NodeSet" t="2020-03-12T09:50:07"><controller name="Bond" />
+<view id="grdShowMigrated" />
+<update>
+  <FilterExpression>StatusCode = 'MIGRATED'</FilterExpression>
+</update></c><c y="NodeSet" t="2020-03-12T09:50:15"><controller name="Bond" />
+<copy>
+  <controller name="Bond" />
+  <view id="grdShowMigrated" />
+</copy></c><c y="NodeSet" t="2020-03-12T09:50:29"><controller name="Bond" />
+<view id="v100" />
+<rename>grdShowActive</rename></c><c y="NodeSet" t="2020-03-12T09:50:41"><controller name="Bond" />
+<view id="grdShowMigrated" />
+<before>
+  <controller name="Bond" />
+  <view id="grdShowActive" />
+</before></c><c y="NodeSet" t="2020-03-12T09:50:54"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <FilterExpression>StatusCode != 'MIGRATED'</FilterExpression>
+</update></c><c y="NodeSet" t="2020-03-12T09:51:14"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <Label>Show All Non Migrated Bonds</Label>
+</update></c><c y="NodeSet" t="2020-03-12T09:51:25"><controller name="Bond" />
+<view id="grdShowMigrated" />
+<update>
+  <Label>Show All Migrated Bonds</Label>
+</update></c><c y="NodeSet" t="2020-03-12T09:52:38"><controller name="Bond" />
+<view id="grdShowMigrated" />
+<update>
+  <GroupExpression>StatusCode</GroupExpression>
+</update></c><c y="NodeSet" t="2020-03-12T09:52:46"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <GroupExpression>StatusCode</GroupExpression>
+</update></c><c y="NodeSet" t="2020-03-12T09:52:56"><controller name="Bond" />
+<view id="grdShowAll" />
+<update>
+  <GroupExpression>StatusCode</GroupExpression>
+</update></c><c y="NodeSet" t="2020-03-12T09:54:54"><controller name="Bond" />
+<update>
+  <StatusBar>StatusCode: MIGRATED
+New &gt; MIGRATED &gt;</StatusBar>
+</update></c><c y="NodeSet" t="2020-03-12T09:56:10"><controller name="Bond" />
+<field name="ResidentialTenancyID" />
+<update>
+  <SearchOnStart>true</SearchOnStart>
+</update></c><c y="NodeSet" t="2020-03-12T10:26:43"><controller name="Bond" />
+<field name="Tenant" />
+<delete /></c><c y="NodeSet" t="2020-03-12T10:34:00"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <FilterExpression>StatusCode = 'LODGED' OR StatusCode = '14 DAY LETTER' OR StatusCode = 'REFUND-IN-PROGRESS' 
+</FilterExpression>
+</update></c><c y="NodeSet" t="2020-03-12T11:49:22"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <Label>Show Active Bonds</Label>
+  <FilterExpression>StatusCode = 'LODGED' OR StatusCode = '14 DAY LETTER' OR StatusCode = 'REFUND-IN-PROGRESS' 
+</FilterExpression>
+</update></c><c y="NodeSet" t="2020-03-12T11:49:34"><controller name="Bond" />
+<view id="grdShowMigrated" />
+<update>
+  <Label>Show Migrated Bonds</Label>
+</update></c><c y="NodeSet" t="2020-03-12T11:49:41"><controller name="Bond" />
+<view id="grdShowAll" />
+<update>
+  <Label>Show All Bonds</Label>
+</update></c><c y="NodeSet" t="2020-03-12T11:54:26"><controller name="Bond" />
+<view id="grdShowActive" />
+<update>
+  <FilterExpression>StatuscodeIsactive = 1</FilterExpression>
+</update></c><c y="NodeSet" t="2020-03-12T11:58:07"><controller name="Bond" />
+<move>
+  <controller name="Tenant" />
+</move></c><c y="NodeSet" t="2020-03-12T11:58:25"><controller name="Bond" />
+<view id="editForm1" />
+<category id="c2" />
+<move>
+  <controller name="Bond" />
+  <field name="Tenant" />
+</move></c></log><log type="Application"><c y="NodeSet" t="2019-09-18T13:59:01"><page name="VwBmsExtract" />
+<update>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Title>Rental Bonds</Title>
+  <Description>View Rental Bonds</Description>
+  <About>This page allows Rental Bonds management.</About>
+</update></c><c y="NodeSet" t="2019-09-18T14:12:27"><page name="VwBondCountByStatus" />
+<update>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Title>Rental Bonds Count By Status</Title>
+  <Description>Rental Bonds Count By Status</Description>
+  <About>This page allows a view bond count by status management.</About>
+</update></c><c y="NodeSet" t="2019-09-18T14:12:41"><page name="NotesB" />
+<delete /></c><c y="NodeSet" t="2019-09-18T14:15:39"><page name="VwBondCountByStatus" />
+<update>
+  <Name>BondCountByStatus</Name>
+</update></c><c y="NodeSet" t="2019-09-18T14:15:52"><page name="VwBmsExtract" />
+<update>
+  <Name>RentalBonds</Name>
+</update></c><c y="NodeSet" t="2019-09-18T14:16:44"><page name="BondCountByStatus" />
+<rename>Bond Count By Status</rename></c><c y="NodeSet" t="2019-09-18T14:16:50"><page name="RentalBonds" />
+<rename>Rental Bonds</rename></c><c y="NodeSet" t="2019-09-18T14:17:01"><page name="BondCountByStatus" />
+<before>
+  <page name="RentalBonds" />
+</before></c><c y="NodeSet" t="2019-09-23T15:52:31"><pages />
+<insert type="page">
+  <Name>Misc</Name>
+  <Master>_blank</Master>
+  <Generate>Always</Generate>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Path>Misc</Path>
+  <Title>Misc</Title>
+  <Roles>*</Roles>
+</insert></c><c y="NodeSet" t="2019-09-23T15:52:33"><page name="Misc" />
+<move>
+  <page name="StatusCode" />
+</move></c><c y="NodeSet" t="2019-09-23T15:52:54"><page name="Misc" />
+<move>
+  <page name="Lessor" />
+</move></c><c y="NodeSet" t="2019-09-23T15:52:54"><page name="Misc" />
+<move>
+  <page name="Note" />
+</move></c><c y="NodeSet" t="2019-09-23T15:52:54"><page name="Misc" />
+<move>
+  <page name="Tenant" />
+</move></c><c y="NodeSet" t="2019-09-23T15:52:58"><page name="Agent" />
+<before>
+  <page name="Bond" />
+</before></c><c y="NodeSet" t="2019-09-23T15:53:03"><page name="Document" />
+<before>
+  <page name="Refund" />
+</before></c><c y="NodeSet" t="2020-03-12T09:46:57"><pages />
+<renameRefs type="view">
+  <Controller>Bond</Controller>
+  <Name>grid1</Name>
+  <NewName>grdShowAll</NewName>
+</renameRefs></c><c y="NodeSet" t="2020-03-12T12:08:00"><page name="Misc" />
+<move>
+  <page name="Membership" />
+</move></c><c y="NodeSet" t="2020-03-12T12:08:03"><page name="Misc" />
+<move>
+  <page name="Document" />
+</move></c><c y="NodeSet" t="2020-03-12T12:08:07"><page name="Misc" />
+<before>
+  <page name="Tenant" />
+</before></c><c y="NodeSet" t="2020-03-12T12:08:11"><page name="Tenant" />
+<before>
+  <page name="Lessor" />
+</before></c><c y="NodeSet" t="2020-03-12T12:09:03"><page name="Bond" />
+<update>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Title>Bonds</Title>
+  <Description>View Bonds</Description>
+</update></c><c y="NodeSet" t="2020-03-12T12:09:28"><page name="Lessor" />
+<update>
+  <Name>Lessors</Name>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Title>Lessors</Title>
+  <Description>View Lessors</Description>
+</update></c><c y="NodeSet" t="2020-03-12T12:09:40"><page name="Agent" />
+<update>
+  <Name>Agents</Name>
+  <UseExtenders>false</UseExtenders>
+  <Offline>false</Offline>
+  <Title>Agents</Title>
+  <Description>View Agents</Description>
+</update></c></log></logs>

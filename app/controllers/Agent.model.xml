@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Agent" alias="Agent" created="2019-09-23T15:24:32" modified="2019-09-23T15:24:32" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="AgentID" fieldName="AgentID" label="Agent ID" />
+    <column name="FullDisplayName" fieldName="FullDisplayName" label="Full Display Name" />
+    <column name="CompanyShortName" fieldName="CompanyShortName" label="Company Short Name" />
+    <column name="AddressLine1Desc" fieldName="AddressLine1Desc" label="Address Line1 Desc" />
+    <column name="AddressLine2Desc" fieldName="AddressLine2Desc" label="Address Line2 Desc" />
+    <column name="AddressLine3Desc" fieldName="AddressLine3Desc" label="Address Line3 Desc" />
+    <column name="SuburbName" fieldName="SuburbName" label="Suburb Name" />
+    <column name="StateCode" fieldName="StateCode" label="State Code" />
+    <column name="SuburbPostCode" fieldName="SuburbPostCode" label="Suburb Post Code" />
+    <column name="LicenceNumber" fieldName="LicenceNumber" label="Licence Number" />
+    <column name="Office" fieldName="Office" label="Office" />
+  </columns>
+</dataModel>

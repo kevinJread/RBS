@@ -1,0 +1,15 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BondsManagementSystem", "app\", "507B9CEE-B545-4C47-84F3-98242504ECBD"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code On Time Items", "Code On Time Items", "{1A451AA7-4053-48E4-92C0-098BB1F17328}"
+	ProjectSection(SolutionItems) = preProject
+		ClientLibrary.en-GB.txt = ClientLibrary.en-GB.txt
+		DataAquarium.Project.xml = DataAquarium.Project.xml
+		DataAquarium.Version.xml = DataAquarium.Version.xml
+		ClientLibrary.en-AU.txt = ClientLibrary.en-AU.txt
+		Sync.FORTYTWO-kevin.xml = Sync.FORTYTWO-kevin.xml
+	EndProjectSection
+EndProject

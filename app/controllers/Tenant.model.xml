@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Tenant" alias="Tenant" created="2019-09-23T15:24:35" modified="2020-03-12T11:44:54" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="ResidentialTenancy" parentTableSchema="dbo" parentTableName="Bond" x="350" y="20">
+      <foreignKeyColumn columnName="ResidentialTenancyID" parentColumnName="ResidentialTenancyID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="TenantID" fieldName="TenantID" label="Tenant ID" />
+    <column name="ResidentialTenancyID" fieldName="ResidentialTenancyID" label="Residential Tenancy ID" aliasColumnName="ResidentialTenancyID" aliasForeignKey="ResidentialTenancy" />
+    <column name="ResidentialTenancyID" fieldName="ResidentialTenancyResidentialTenancyID" label="Residential Tenancy Residential Tenancy ID" foreignKey="ResidentialTenancy" />
+    <column name="StatusCode" fieldName="ResidentialTenancyStatusCode" label="Residential Tenancy Status Code" foreignKey="ResidentialTenancy" />
+    <column name="FirstName" fieldName="FirstName" label="First Name" />
+    <column name="SurName" fieldName="SurName" label="Last Name" />
+    <column name="EffectiveFromDate" fieldName="EffectiveFromDate" label="Effective From Date" format="g" />
+    <column name="TenantCashAmount" fieldName="TenantCashAmount" label="Tenant Cash Amount" />
+  </columns>
+</dataModel>

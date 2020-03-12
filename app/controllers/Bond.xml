@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Bond" conflictDetection="overwriteChanges" label="Bond" plugIn="MyCompany.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Bond"."ResidentialTenancyID" "ResidentialTenancyID"
+	,"Bond"."AddressLine1Desc" "AddressLine1Desc"
+	,"Bond"."AddressLine2Desc" "AddressLine2Desc"
+	,"Bond"."AddressLine3Desc" "AddressLine3Desc"
+	,"Bond"."SuburbName" "SuburbName"
+	,"Bond"."DistrictName" "DistrictName"
+	,"Bond"."StateCode" "StateCode"
+	,"Bond"."SuburbPostCode" "SuburbPostCode"
+	,"Bond"."BlockKey" "BlockKey"
+	,"Bond"."LandlordID" "LandlordID"
+	,"Landlord"."FirstName" "LandlordFirstName"
+	,"Landlord"."SurName" "LandlordSurName"
+	,"Bond"."LandlordAmount" "LandlordAmount"
+	,"Bond"."LandlordEffectiveDate" "LandlordEffectiveDate"
+	,"Bond"."AgentID" "AgentID"
+	,"Agent"."FullDisplayName" "AgentFullDisplayName"
+	,"Bond"."AgentEffectiveDate" "AgentEffectiveDate"
+	,"Bond"."WeeklyRentalAmount" "WeeklyRentalAmount"
+	,"Bond"."TotalBondAmount" "TotalBondAmount"
+	,"Bond"."StatusCode" "StatusCode"
+	,"StatusCode"."Code" "Code"
+	,"StatusCode"."isActive" "StatuscodeIsactive"
+	,"Bond"."TenDayLetterSentDate" "TenDayLetterSentDate"
+	,"Bond"."TenDayLetterExpiryDate" "TenDayLetterExpiryDate"
+	,"Bond"."TenDayLetterStatusCode" "TenDayLetterStatusCode"
+	,"Bond"."DwellingTypeCode" "DwellingTypeCode"
+	,"Bond"."BedroomCount" "BedroomCount"
+	,"Bond"."LodgementTstamp" "LodgementTstamp"
+	,"Bond"."RefundDate" "RefundDate"
+	,"Bond"."RefundAmount" "RefundAmount"
+	,"Bond"."TenancyCommencementDate" "TenancyCommencementDate"
+	,"Bond"."HousingInd" "HousingInd"
+	,"Bond"."RBSNo" "Rbsno"
+	,"Bond"."MigrationNote" "MigrationNote"
+	,"Bond"."LastUpdatedTstamp" "LastUpdatedTstamp"
+	,"Bond"."LastUpdatedUserCode" "LastUpdatedUserCode"
+	,"Bond"."ExpectedBondAmount" "ExpectedBondAmount"
+from "dbo"."Bond" "Bond"
+	left join "dbo"."Agent" "Agent" on "Bond"."AgentID" = "Agent"."AgentID"
+	left join "dbo"."StatusCode" "StatusCode" on "Bond"."StatusCode" = "StatusCode"."Code"
+	left join "dbo"."Lessor" "Landlord" on "Bond"."LandlordID" = "Landlord"."LandlordID"
+order by "Bond"."ResidentialTenancyID" asc]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ResidentialTenancyID" type="Int32" allowNulls="false" isPrimaryKey="true" label="Residential Tenancy ID">
+      <items searchOnStart="true" />
+    </field>
+    <field name="StatusCode" type="String" label="Status Code" length="20">
+      <items style="Lookup" dataController="StatusCode" newDataView="createForm1" dataValueField="Code" dataTextField="Code" copy="StatuscodeIsactive=isActive" />
+    </field>
+    <field name="AddressLine1Desc" type="String" label="Address Line1" length="50" showInSummary="true" />
+    <field name="AddressLine2Desc" type="String" label="Address Line2" length="50" showInSummary="true" />
+    <field name="AddressLine3Desc" type="String" label="Address Line3" length="50" showInSummary="true" />
+    <field name="SuburbName" type="String" label="Suburb Name" length="30" showInSummary="true" />
+    <field name="StateCode" type="String" label="State Code" length="10" />
+    <field name="SuburbPostCode" type="String" label="Suburb Post Code" length="10" />
+    <field name="BlockKey" type="Int64" label="Block Key" />
+    <field name="LandlordID" type="Int32" label="Landlord ID">
+      <items style="Lookup" dataController="Lessor" newDataView="createForm1" dataValueField="LandlordID" dataTextField="FirstName" copy="LandlordSurName=SurName" />
+    </field>
+    <field name="LandlordFirstName" type="String" readOnly="true" label="Landlord First Name" length="50" />
+    <field name="LandlordSurName" type="String" readOnly="true" label="Landlord Sur Name" length="50" />
+    <field name="LandlordAmount" type="Decimal" dataFormatString="c" label="Landlord Amount" />
+    <field name="LandlordEffectiveDate" type="DateTime" dataFormatString="g" label="Landlord Effective Date" />
+    <field name="AgentID" type="Int32" label="Agent ID">
+      <items style="Lookup" dataController="Agent" newDataView="createForm1" dataValueField="AgentID" dataTextField="FullDisplayName" />
+    </field>
+    <field name="AgentFullDisplayName" type="String" readOnly="true" label="Agent Full Display Name" length="100" />
+    <field name="AgentEffectiveDate" type="DateTime" dataFormatString="g" label="Agent Effective Date" />
+    <field name="WeeklyRentalAmount" type="Decimal" dataFormatString="c" label="Weekly Rental Amount" />
+    <field name="TotalBondAmount" type="Decimal" dataFormatString="c" label="Total Bond Amount" />
+    <field name="Code" type="String" readOnly="true" label="Status Code" length="20" />
+    <field name="StatuscodeIsactive" type="Boolean" readOnly="true" label="Statuscode Isactive" />
+    <field name="TenDayLetterSentDate" type="DateTime" dataFormatString="g" label="Ten Day Letter Sent Date" />
+    <field name="TenDayLetterExpiryDate" type="DateTime" dataFormatString="g" label="Ten Day Letter Expiry Date" />
+    <field name="TenDayLetterStatusCode" type="String" label="Ten Day Letter Status Code" length="20" />
+    <field name="DwellingTypeCode" type="String" label="Dwelling Type Code" length="20" />
+    <field name="BedroomCount" type="Int16" label="Bedroom Count" />
+    <field name="LodgementTstamp" type="DateTime" dataFormatString="g" label="Lodgement Tstamp" />
+    <field name="RefundDate" type="DateTime" dataFormatString="g" label="Refund Date" />
+    <field name="RefundAmount" type="Decimal" dataFormatString="c" label="Refund Amount" />
+    <field name="TenancyCommencementDate" type="DateTime" dataFormatString="g" label="Tenancy Commencement Date" />
+    <field name="HousingInd" type="Int16" label="Housing Ind" />
+    <field name="Rbsno" type="Int32" label="RBS No" />
+    <field name="MigrationNote" type="String" label="Migration Note" length="100" />
+    <field name="LastUpdatedTstamp" type="DateTime" dataFormatString="g" label="Last Updated Tstamp" />
+    <field name="LastUpdatedUserCode" type="String" label="Last Updated User Code" length="10" />
+    <field name="ExpectedBondAmount" type="Decimal" dataFormatString="c" label="Expected Bond Amount" />
+    <field name="Tenant" type="DataView" label="Tenant">
+      <dataView controller="Tenant" view="grid1" filterFields="ResidentialTenancyID" />
+    </field>
+  </fields>
+  <views>
+    <view id="grdShowActive" type="Grid" commandId="command1" label="Show Active Bonds" sortExpression="ResidentialTenancyID asc" filter="StatuscodeIsactive = 1" groupExpression="StatusCode">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ResidentialTenancyID" columns="15" />
+        <dataField fieldName="StatusCode" aliasFieldName="Code" />
+        <dataField fieldName="Rbsno" columns="15" />
+        <dataField fieldName="AddressLine1Desc" columns="50" />
+        <dataField fieldName="SuburbName" columns="30" />
+        <dataField fieldName="BlockKey" columns="15" />
+        <dataField fieldName="LandlordID" aliasFieldName="LandlordFirstName" />
+        <dataField fieldName="LandlordSurName" columns="50" />
+        <dataField fieldName="AgentID" aliasFieldName="AgentFullDisplayName" />
+        <dataField fieldName="TotalBondAmount" columns="15" />
+        <dataField fieldName="StatuscodeIsactive" />
+        <dataField fieldName="TenDayLetterSentDate" columns="20" />
+        <dataField fieldName="TenDayLetterExpiryDate" columns="20" />
+        <dataField fieldName="TenDayLetterStatusCode" columns="20" />
+        <dataField fieldName="LodgementTstamp" columns="20" tag="calendar-start" />
+        <dataField fieldName="RefundDate" columns="20" />
+        <dataField fieldName="RefundAmount" columns="15" />
+        <dataField fieldName="TenancyCommencementDate" columns="20" />
+        <dataField fieldName="HousingInd" columns="15" />
+      </dataFields>
+    </view>
+    <view id="grdShowMigrated" type="Grid" commandId="command1" label="Show Migrated Bonds" sortExpression="ResidentialTenancyID asc" filter="StatusCode = 'MIGRATED'" groupExpression="StatusCode">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ResidentialTenancyID" columns="15" />
+        <dataField fieldName="StatusCode" aliasFieldName="Code" />
+        <dataField fieldName="Rbsno" columns="15" />
+        <dataField fieldName="AddressLine1Desc" columns="50" />
+        <dataField fieldName="SuburbName" columns="30" />
+        <dataField fieldName="BlockKey" columns="15" />
+        <dataField fieldName="LandlordID" aliasFieldName="LandlordFirstName" />
+        <dataField fieldName="LandlordSurName" columns="50" />
+        <dataField fieldName="AgentID" aliasFieldName="AgentFullDisplayName" />
+        <dataField fieldName="TotalBondAmount" columns="15" />
+        <dataField fieldName="StatuscodeIsactive" />
+        <dataField fieldName="TenDayLetterSentDate" columns="20" />
+        <dataField fieldName="TenDayLetterExpiryDate" columns="20" />
+        <dataField fieldName="TenDayLetterStatusCode" columns="20" />
+        <dataField fieldName="LodgementTstamp" columns="20" tag="calendar-start" />
+        <dataField fieldName="RefundDate" columns="20" />
+        <dataField fieldName="RefundAmount" columns="15" />
+        <dataField fieldName="TenancyCommencementDate" columns="20" />
+        <dataField fieldName="HousingInd" columns="15" />
+      </dataFields>
+    </view>
+    <view id="grdShowAll" type="Grid" commandId="command1" label="Show All Bonds" sortExpression="ResidentialTenancyID asc" groupExpression="StatusCode">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ResidentialTenancyID" columns="15" />
+        <dataField fieldName="StatusCode" aliasFieldName="Code" />
+        <dataField fieldName="Rbsno" columns="15" />
+        <dataField fieldName="AddressLine1Desc" columns="50" />
+        <dataField fieldName="SuburbName" columns="30" />
+        <dataField fieldName="BlockKey" columns="15" />
+        <dataField fieldName="LandlordID" aliasFieldName="LandlordFirstName" />
+        <dataField fieldName="LandlordSurName" columns="50" />
+        <dataField fieldName="AgentID" aliasFieldName="AgentFullDisplayName" />
+        <dataField fieldName="TotalBondAmount" columns="15" />
+        <dataField fieldName="StatuscodeIsactive" />
+        <dataField fieldName="TenDayLetterSentDate" columns="20" />
+        <dataField fieldName="TenDayLetterExpiryDate" columns="20" />
+        <dataField fieldName="TenDayLetterStatusCode" columns="20" />
+        <dataField fieldName="LodgementTstamp" columns="20" tag="calendar-start" />
+        <dataField fieldName="RefundDate" columns="20" />
+        <dataField fieldName="RefundAmount" columns="15" />
+        <dataField fieldName="TenancyCommencementDate" columns="20" />
+        <dataField fieldName="HousingInd" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Bond" tags="modal-fullscreen">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Bond" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ResidentialTenancyID" columns="15" />
+            <dataField fieldName="StatusCode" aliasFieldName="Code" />
+            <dataField fieldName="TotalBondAmount" columns="15" />
+            <dataField fieldName="LodgementTstamp" columns="20" />
+            <dataField fieldName="TenancyCommencementDate" columns="20" />
+            <dataField fieldName="HousingInd" columns="15" />
+            <dataField fieldName="LandlordID" aliasFieldName="LandlordFirstName" />
+            <dataField fieldName="LandlordSurName" columns="50" />
+            <dataField fieldName="AgentID" aliasFieldName="AgentFullDisplayName" />
+            <dataField fieldName="Rbsno" columns="15" />
+            <dataField fieldName="MigrationNote" />
+            <dataField fieldName="StatuscodeIsactive" />
+          </dataFields>
+        </category>
+        <category headerText="Refunds" tab="Refunds" id="c6" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="RefundAmount" columns="15" />
+            <dataField fieldName="RefundDate" columns="20" />
+            <dataField fieldName="LandlordAmount" columns="15" />
+            <dataField fieldName="LandlordEffectiveDate" columns="20" />
+            <dataField fieldName="AgentEffectiveDate" columns="20" />
+            <dataField fieldName="TenDayLetterSentDate" columns="20" />
+            <dataField fieldName="TenDayLetterExpiryDate" columns="20" />
+            <dataField fieldName="TenDayLetterStatusCode" columns="20" />
+          </dataFields>
+        </category>
+        <category headerText="Tenants" tab="Tenants" id="c2" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="Tenant" columns="15" />
+          </dataFields>
+        </category>
+        <category headerText="Address" tab="Address" id="c5" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="AddressLine1Desc" columns="50" />
+            <dataField fieldName="AddressLine2Desc" columns="50" />
+            <dataField fieldName="AddressLine3Desc" columns="50" />
+            <dataField fieldName="SuburbName" columns="30" />
+            <dataField fieldName="StateCode" columns="10" />
+            <dataField fieldName="SuburbPostCode" columns="10" />
+            <dataField fieldName="BlockKey" columns="15" />
+          </dataFields>
+        </category>
+        <category headerText="Notes" tab="Notes" id="c3" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="DwellingTypeCode" columns="20" />
+            <dataField fieldName="BedroomCount" columns="15" />
+            <dataField fieldName="WeeklyRentalAmount" columns="15" />
+            <dataField fieldName="ExpectedBondAmount" columns="15" />
+          </dataFields>
+        </category>
+        <category headerText="Audit" tab="Audit" id="c4" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="LastUpdatedTstamp" columns="20" />
+            <dataField fieldName="LastUpdatedUserCode" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Bond">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ResidentialTenancyID" columns="15" />
+            <dataField fieldName="AddressLine1Desc" columns="50" />
+            <dataField fieldName="AddressLine2Desc" columns="50" />
+            <dataField fieldName="AddressLine3Desc" columns="50" />
+            <dataField fieldName="SuburbName" columns="30" />
+            <dataField fieldName="StateCode" columns="10" />
+            <dataField fieldName="SuburbPostCode" columns="10" />
+            <dataField fieldName="BlockKey" columns="15" />
+            <dataField fieldName="LandlordID" aliasFieldName="LandlordFirstName" />
+            <dataField fieldName="LandlordSurName" columns="50" />
+            <dataField fieldName="LandlordAmount" columns="15" />
+            <dataField fieldName="LandlordEffectiveDate" columns="20" />
+            <dataField fieldName="AgentID" aliasFieldName="AgentFullDisplayName" />
+            <dataField fieldName="AgentEffectiveDate" columns="20" />
+            <dataField fieldName="WeeklyRentalAmount" columns="15" />
+            <dataField fieldName="TotalBondAmount" columns="15" />
+            <dataField fieldName="StatusCode" aliasFieldName="Code" />
+            <dataField fieldName="StatuscodeIsactive" />
+            <dataField fieldName="TenDayLetterSentDate" columns="20" />
+            <dataField fieldName="TenDayLetterExpiryDate" columns="20" />
+            <dataField fieldName="TenDayLetterStatusCode" columns="20" />
+            <dataField fieldName="DwellingTypeCode" columns="20" />
+            <dataField fieldName="BedroomCount" columns="15" />
+            <dataField fieldName="LodgementTstamp" columns="20" />
+            <dataField fieldName="RefundDate" columns="20" />
+            <dataField fieldName="RefundAmount" columns="15" />
+            <dataField fieldName="TenancyCommencementDate" columns="20" />
+            <dataField fieldName="HousingInd" columns="15" />
+            <dataField fieldName="Rbsno" columns="15" />
+            <dataField fieldName="MigrationNote" />
+            <dataField fieldName="LastUpdatedTstamp" columns="20" />
+            <dataField fieldName="LastUpdatedUserCode" columns="10" />
+            <dataField fieldName="ExpectedBondAmount" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grdShowAll" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action commandName="Custom" commandArgument="TransferToPortal" headerText="Transfer to RB Portal" cssClass="material-icon-cancel" id="a100">
+        <data />
+      </action>
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+      <action commandName="Custom" commandArgument="TransferToPortal" headerText="Transfer to RB Portal" cssClass="material-icon-cancel" id="a100" whenClientScript="$row.StatusCode != 'MIGRATED'">
+        <data />
+      </action>
+      <action commandName="Navigate" commandArgument="_blank:https://rentalbonds.revenue.act.gov.au/Login.aspx?id={Rbsno}" headerText="Show in Portal" id="a101" whenClientScript="!!$row.Rbsno" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grdShowAll" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grdShowAll" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag9" scope="ActionColumn">
+      <action id="a1" commandName="Edit" commandArgument="editForm1" />
+      <action id="a2" commandName="Delete" />
+    </actionGroup>
+  </actions>
+  <statusBar><![CDATA[StatusCode: MIGRATED
+New > MIGRATED >]]></statusBar>
+  <businessRules>
+    <rule id="r100" commandName="Custom" type="Sql" phase="Execute" commandArgument="TransferToPortal"><![CDATA[UPDATE Bond
+SET StatusCode = 'TOPORTAL'
+WHERE Bond.ResidentialTenancyId = @ResidentialTenancyID]]></rule>
+  </businessRules>
+</dataController>

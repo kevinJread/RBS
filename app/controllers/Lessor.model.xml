@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Lessor" alias="Lessor" created="2019-09-23T15:24:34" modified="2019-09-23T15:24:34" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="LandlordID" fieldName="LandlordID" label="Landlord ID" />
+    <column name="FirstName" fieldName="FirstName" label="First Name" />
+    <column name="SurName" fieldName="SurName" label="Sur Name" />
+    <column name="Addressline" fieldName="Addressline" label="Addressline" />
+    <column name="Suburb" fieldName="Suburb" label="Suburb" />
+    <column name="State" fieldName="State" label="State" />
+    <column name="PostCode" fieldName="PostCode" label="Post Code" />
+    <column name="DistrictName" fieldName="DistrictName" label="District Name" />
+  </columns>
+</dataModel>
